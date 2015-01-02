@@ -1,0 +1,15 @@
+# Filesystem
+alias ..="cd .."
+alias ...="cd ../.."
+alias -- -="cd -"
+alias c="clear"
+alias l="ls -lah"
+alias ll="l"
+alias md="mkdir -p"
+
+# Git
+alias gs="git status"
+alias ga="git add"
+alias gb="git branch"
+alias gc="git commit"
+alias gd="git diff"

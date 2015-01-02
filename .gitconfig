@@ -1,0 +1,10 @@
+[alias]
+  br = branch
+  co = checkout
+  ci = commit
+  ec = config --global -e
+  hist = log --pretty:format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  st = status
+[user]
+  name = Daniel Morris
+  email = daniel@honestempire.com

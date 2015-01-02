@@ -1,0 +1,2 @@
+# Disable the sudden motion sensor
+sudo pmset -a sms 0
