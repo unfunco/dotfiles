@@ -5,6 +5,8 @@
   ec = config --global -e
   hist = log --pretty:format:\"%h %ad | %s%d [%an]\" --graph --date=short
   st = status
+[core]
+  excludesfile = /Users/danielmorris/.gitignore
 [user]
   name = Daniel Morris
   email = daniel@honestempire.com
