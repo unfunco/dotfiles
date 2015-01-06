@@ -53,3 +53,8 @@ vnoremap M 10k
 
 " Open ~/.zshrc in the same buffer
 nnoremap <leader>ez :e ~/.zshrc<cr>
+
+" Lapses in concentration
+nnoremap ; :
+command WQ wq
+command Wq wq
