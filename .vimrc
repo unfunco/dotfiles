@@ -58,3 +58,4 @@ nnoremap <leader>ez :e ~/.zshrc<cr>
 nnoremap ; :
 command WQ wq
 command Wq wq
+command Q q
