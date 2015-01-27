@@ -1,2 +1,5 @@
 # Disable the sudden motion sensor
 sudo pmset -a sms 0
+
+# Enable JavaScript compilation from the CLI
+sudo ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc /bin/jsc
