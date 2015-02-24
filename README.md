@@ -1,5 +1,11 @@
 # Daniel does dotfiles
 
+[RCM(7)](http://thoughtbot.github.io/rcm/rcm.7.html) is used to manage these dotfiles.
+
+```bash
+$ rcup -x README.md -x com.googlecode.iterm2.plist -x osx
+```
+
 ## Plugins
 
 * [Syntax highlighting for ZSH](https://github.com/zsh-users/zsh-syntax-highlighting)
