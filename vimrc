@@ -45,6 +45,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd FileType markdown setlocal spell
   autocmd FileType css,scss,sass setlocal iskeyword+=-
+  autocmd FileType php set tabstop=4
 augroup END
 
 " Move faster
