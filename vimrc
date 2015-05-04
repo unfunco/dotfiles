@@ -39,6 +39,9 @@ endif
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
+" Redraw the screen and remove highlighting
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
 augroup vimrcEx
   autocmd!
 
