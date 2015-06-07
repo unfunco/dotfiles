@@ -26,7 +26,6 @@ git_info() {
 }
 
 export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_info) %(?.%{$fg_bold[green]%}λ.%{$fg_bold[red]%}λ)%{$reset_color%} '
-export PATH="$HOME/.rbenv/bin:$PATH"
 
 bindkey -v
 
