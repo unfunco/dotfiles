@@ -16,6 +16,7 @@ SAVEHIST=8192
 export CLICOLOR=1
 
 [[ -f ~/.zshaliases ]] && source ~/.zshaliases
+[[ -f ~/Ephemera/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/Ephemera/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 git_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
@@ -25,20 +26,10 @@ git_info() {
 }
 
 export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_info) %(?.%{$fg_bold[green]%}λ.%{$fg_bold[red]%}λ)%{$reset_color%} '
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 bindkey -v
-bindkey "^F" vi-cmd-mode
-bindkey jj vi-cmd-mode
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
-bindkey "^R" history-incremental-search-backward
-bindkey "^P" history-search-backward
-bindkey "^Y" accept-and-hold
-bindkey "^N" insert-last-word
-bindkey "^T" "^[I sudo ^[A"
 
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
 fi
-
-source ~/Ephemera/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
