@@ -25,9 +25,21 @@ git_info() {
   fi
 }
 
+expand_alias() {
+  if [[ $LBUFFER =~ '[a-z0-9]+$' ]]; then
+    zle _expand_alias
+    zle expand-word
+  fi
+  
+  zle self-insert
+}
+zle -N expand_alias
+
 export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_info) %(?.%{$fg_bold[green]%}λ.%{$fg_bold[red]%}λ)%{$reset_color%} '
 
+bindkey -e
 bindkey -v
+bindkey " " expand_alias
 
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
