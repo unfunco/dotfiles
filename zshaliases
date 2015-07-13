@@ -3,7 +3,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias -- -="cd -"
 alias c="clear"
-alias l="ls -lah"
+alias l="ls -lah | grep -v .DS_Store"
 alias ll="l"
 alias md="mkdir -p"
 
