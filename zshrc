@@ -4,6 +4,8 @@ autoload -Uz compinit
 colors
 compinit
 
+tabs -4
+
 setopt appendhistory autocd extendedglob nomatch notify promptsubst
 unsetopt beep nomatch
 
@@ -30,7 +32,7 @@ expand_alias() {
     zle _expand_alias
     zle expand-word
   fi
-  
+
   zle self-insert
 }
 zle -N expand_alias
