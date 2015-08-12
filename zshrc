@@ -4,7 +4,7 @@ autoload -Uz compinit
 colors
 compinit
 
-tabs -4
+tabs -2
 
 setopt appendhistory autocd extendedglob nomatch notify promptsubst
 unsetopt beep nomatch
@@ -39,9 +39,8 @@ zle -N expand_alias
 
 export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_info) %(?.%{$fg_bold[green]%}λ.%{$fg_bold[red]%}λ)%{$reset_color%} '
 
-bindkey -e
-bindkey -v
 bindkey " " expand_alias
+bindkey -e
 
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
