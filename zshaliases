@@ -3,9 +3,12 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias -- -="cd -"
 alias c="clear"
-alias l="ls -lah | grep -v .DS_Store"
+alias l="ls -lah"
 alias ll="l"
 alias md="mkdir -p"
+
+# Misc
+alias be="bundle exec"
 
 # Git
 alias gs="git status"

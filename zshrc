@@ -42,5 +42,5 @@ bindkey -v
 bindkey " " expand_alias
 
 if which rbenv > /dev/null; then
-  eval "$(rbenv init -)";
+  eval "$(rbenv init - zsh)";
 fi
