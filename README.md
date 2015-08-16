@@ -1,16 +1,20 @@
 # Daniel does dotfiles
 
-[RCM(7)](http://thoughtbot.github.io/rcm/rcm.7.html) is used to manage these dotfiles.
+[RCM(7)](http://thoughtbot.github.io/rcm/rcm.7.html) by [Thoughtbot](https://github.com/thoughtbot)
+is used to manage these dotfiles.
 
 ```bash
-$ rcup -x README.md -x com.googlecode.iterm2.plist -x osx
+rcup -x README.md -x danielmorris.terminal -x osx
 ```
 
-## Plugins
+## Plugins and dependencies
 
+* [Pathogen](https://github.com/tpope/vim-pathogen) by [Tim Pope](https://github.com/tpope)
 * [Syntax highlighting for ZSH](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ## License
+
+### The MIT License
 
 Copyright © 2015 [Daniel Morris](https://github.com/unfunco)  
 
