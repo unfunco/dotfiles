@@ -3,17 +3,21 @@ execute pathogen#infect()
 set nocompatible
 
 set autoindent
+set autoread
 set autowrite
+set backspace=indent,eol,start
 set diffopt+=vertical
 set encoding=utf-8
 set expandtab
-set hlsearch
+set guioptions-=T
 set incsearch
 set ignorecase
 set laststatus=2
+set lazyredraw
 set list listchars=tab:»·,trail:·
 set nobackup
 set noswapfile
+set nowrap
 set nowritebackup
 set number
 set numberwidth=5
@@ -33,6 +37,7 @@ nnoremap <space> <nop>
 let mapleader = " "
 
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  set hlsearch
   syntax on
 endif
 
@@ -57,8 +62,14 @@ vnoremap N 10j
 nnoremap M 10k
 vnoremap M 10k
 
+" Disable K
+map K <nop>
+
 " Open ~/.zshrc in the same buffer
 nnoremap <leader>ez :e ~/.zshrc<cr>
+
+" Leader mappings
+vmap <leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
 " Lapses in concentration
 nnoremap ; :
