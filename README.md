@@ -4,7 +4,7 @@
 is used to manage these dotfiles.
 
 ```bash
-rcup -x README.md -x danielmorris.terminal -x osx
+$ rcup -v -x README.md -x danielmorris.terminal -x osx -x php.snippet
 ```
 
 ## Plugins and dependencies
