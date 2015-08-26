@@ -7,6 +7,8 @@
   st = status
 [core]
   excludesfile = /Users/danielmorris/.gitignore
+[push]
+  default = simple
 [user]
   name = Daniel Morris
   email = daniel@honestempire.com
