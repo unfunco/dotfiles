@@ -37,7 +37,7 @@ expand_alias() {
 }
 zle -N expand_alias
 
-export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_info) %(?.%{$fg_bold[green]%}λ.%{$fg_bold[red]%}λ)%{$reset_color%} '
+export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_info)'$'\n''%(?.%{$fg_bold[green]%}🍍.%{$fg_bold[red]%}👻)%{$reset_color%}  '
 
 bindkey " " expand_alias
 bindkey -e
@@ -45,3 +45,6 @@ bindkey -e
 if which rbenv > /dev/null; then
   eval "$(rbenv init - zsh)";
 fi
+
+export NVM_DIR="/Users/danielmorris/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
