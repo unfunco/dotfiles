@@ -7,7 +7,7 @@
   st = status
 [core]
   editor = /usr/bin/vim
-  excludesfile = /Users/danielmorris/.gitignore
+  excludesfile = ~/.gitignore
 [push]
   default = simple
 [user]
