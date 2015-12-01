@@ -15,6 +15,7 @@ brew ruby-build
 brew tmux
 brew vim --override-system-vi
 
+cask flux
 cask vagrant
 cask virtualbox
 cask vlc
