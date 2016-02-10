@@ -9,6 +9,7 @@ alias md="mkdir -p"
 
 # Misc
 alias be="bundle exec"
+alias mysql="mysql --i-am-a-dummy"
 
 # Git
 alias gs="git status"
