@@ -3,6 +3,8 @@ tap homebrew/versions
 tap homebrew/homebrew-php
 tap thoughtbot/formulae
 
+brew autoconf
+brew bison
 brew dnscrypt-proxy
 brew dnsmasq
 brew curl
@@ -20,8 +22,5 @@ cask vagrant
 cask virtualbox
 cask vlc
 
-appstore Numbers
-appstore Pages
-appstore Xcode
-
 link --force curl
+link --force bison

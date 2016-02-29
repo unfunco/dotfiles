@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+bindir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+dependencies=(cp curl ln ruby pmset sudo)
+
+for dependency in "${dependencies[@]}"
+do
+  :
+  hash $dependency 2>/dev/null || {
+    echo >&2 "$dependency is required.";
+    exit 1;
+  }
+done
+
+# Homebrew
+hash brew 2>/dev/null || {
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
+
+brew tap caskroom/cask
+cd $bindir/..
+brew bundle
+
+# Disable the sudden motion sensor since disks are solid-state.
+sudo pmset -a sms 0
+
+# Enable JavaScript compilation from the CLI.
+hash jsc 2>/dev/null || {
+  ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc /usr/local/bin/jsc
+}
+
+# Dotfiles
