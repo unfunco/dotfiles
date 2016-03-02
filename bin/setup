@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+bindir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+homedir="$bindir/../home"
+
+dependencies=(cp curl ln ruby pmset sudo)
+
+for dependency in "${dependencies[@]}"
+do
+  :
+  hash $dependency 2>/dev/null || {
+    echo >&2 "$dependency is required.";
+    exit 1;
+  }
+done
+
+# Homebrew
+hash brew 2>/dev/null || {
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
+
+brew tap caskroom/cask
+brew tap homebrew/dupes
+brew tap homebrew/homebrew-php
+brew tap homebrew/versions
+brew tap thoughtbot/formulae
+
+brew install autoconf
+brew install bison
+brew install dnscrypt-proxy
+brew install dnsmasq
+brew install curl
+brew install git
+brew install openssl
+brew install privoxy
+brew install rbenv
+brew install rcm
+brew install ruby-build
+brew install tmux
+brew install vim --override-system-vi
+
+brew cask install flux
+brew cask install vagrant
+brew cask install virtualbox
+brew cask install vlc
+
+brew link --force curl
+brew link --force bison
+
+# Disable the sudden motion sensor since disks are solid-state.
+sudo pmset -a sms 0
+
+# Enable JavaScript compilation from the CLI.
+hash jsc 2>/dev/null || {
+  ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc /usr/local/bin/jsc
+}
+
+# Pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# Dotfiles
+lsrc -d $homedir
+rcup -v -d $homedir
+
+# Change to ZSH
+chsh -s /bin/zsh

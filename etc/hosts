@@ -1,0 +1,60 @@
+# AddThis
+0.0.0.0       addthis.com
+0.0.0.0       www.addthis.com
+
+# Advertising
+0.0.0.0       ad.doubleclick.net
+
+# Analytics
+
+# Facebook
+0.0.0.0       apps.facebook.com
+0.0.0.0       connect.facebook.com
+0.0.0.0       connect.facebook.net
+0.0.0.0       facebook.com
+0.0.0.0       facebook.net
+0.0.0.0       fbcdn.com
+0.0.0.0       fbcdn.net
+0.0.0.0       login.facebook.com
+0.0.0.0       static.ak.connect.facebook.com
+0.0.0.0       static.ak.fbcdn.net
+0.0.0.0       www.connect.facebook.com
+0.0.0.0       www.connect.facebook.net
+0.0.0.0       www.facebook.com
+0.0.0.0       www.facebook.net
+0.0.0.0       www.fbcdn.com
+0.0.0.0       www.fbcdn.net
+0.0.0.0       www.login.facebook.com
+0.0.0.0       www.static.ak.connect.facebook.com
+
+# Google
+0.0.0.0       google-analytics.com
+0.0.0.0       google.com
+0.0.0.0       googlesyndication.com
+0.0.0.0       pagead.googlesyndication.com
+0.0.0.0       pagead1.googlesyndication.com
+0.0.0.0       pagead2.googlesyndication.com
+0.0.0.0       ssl.google-analytics.com
+0.0.0.0       www.google-analytics.com
+0.0.0.0       www.google.com
+
+# LinkedIn
+0.0.0.0       linkedin.com
+
+# Loopback
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost 
+
+# Malebolge
+0.0.0.0       buzzfeed.com
+0.0.0.0       dailymail.co.uk
+0.0.0.0       thesun.co.uk
+
+# ShareThis
+0.0.0.0       sharethis.com
+0.0.0.0       w.sharethis.com
+0.0.0.0       www.sharethis.com
+
+# Twitter
+0.0.0.0       twitter.com
