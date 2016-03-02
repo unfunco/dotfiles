@@ -18,8 +18,32 @@ hash brew 2>/dev/null || {
 }
 
 brew tap caskroom/cask
-cd $bindir/..
-brew bundle
+brew tap homebrew/dupes
+brew tap homebrew/homebrew-php
+brew tap homebrew/versions
+brew tap thoughtbot/formulae
+
+brew install autoconf
+brew install bison
+brew install dnscrypt-proxy
+brew install dnsmasq
+brew install curl
+brew install git
+brew install openssl
+brew install privoxy
+brew install rbenv
+brew install rcm
+brew install ruby-build
+brew install tmux
+brew install vim --override-system-vi
+
+brew cask install flux
+brew cask install vagrant
+brew cask install virtualbox
+brew cask install vlc
+
+brew link --force curl
+brew link --force bison
 
 # Disable the sudden motion sensor since disks are solid-state.
 sudo pmset -a sms 0
@@ -28,5 +52,3 @@ sudo pmset -a sms 0
 hash jsc 2>/dev/null || {
   ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc /usr/local/bin/jsc
 }
-
-# Dotfiles
