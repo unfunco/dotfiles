@@ -18,7 +18,7 @@ SAVEHIST=8192
 export CLICOLOR=1
 
 [[ -f ~/.zshaliases ]] && source ~/.zshaliases
-[[ -f ~/Ephemera/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/Ephemera/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 git_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
