@@ -3,7 +3,7 @@
 bindir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 homedir="$bindir/../home"
 
-dependencies=(cp curl ln ruby pmset sudo)
+dependencies=(cp curl jsc ln ruby pmset sudo)
 
 for dependency in "${dependencies[@]}"
 do
@@ -52,9 +52,7 @@ brew link --force bison
 sudo pmset -a sms 0
 
 # Enable JavaScript compilation from the CLI.
-hash jsc 2>/dev/null || {
-  ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc /usr/local/bin/jsc
-}
+ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc /usr/local/bin/jsc
 
 # Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
