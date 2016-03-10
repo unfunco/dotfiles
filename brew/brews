@@ -1,0 +1,13 @@
+autoconf
+bison
+dnscrypt-proxy
+dnsmasq
+curl
+git
+openssl
+privoxy
+rbenv
+ruby-build
+tmux
+vim
+zsh-syntax-highlighting

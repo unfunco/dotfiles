@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 bindir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
-homedir="$bindir/../home"
+basedir="$bindir/.."
+homedir="$homedir/home"
 
-dependencies=(cp curl jsc ln ruby pmset sudo)
+dependencies=(cp curl ln mkdir ruby pmset sudo)
 
 for dependency in "${dependencies[@]}"
 do
@@ -19,40 +20,17 @@ hash brew 2>/dev/null || {
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 }
 
-brew tap caskroom/cask
-brew tap homebrew/dupes
-brew tap homebrew/homebrew-php
-brew tap homebrew/versions
-brew tap thoughtbot/formulae
-
-brew install autoconf
-brew install bison
-brew install dnscrypt-proxy
-brew install dnsmasq
-brew install curl
-brew install git
-brew install openssl
-brew install privoxy
-brew install rbenv
-brew install rcm
-brew install ruby-build
-brew install tmux
-brew install vim --override-system-vi
-brew install zsh-syntax-highlighting
-
-brew cask install flux
-brew cask install vagrant
-brew cask install virtualbox
-brew cask install vlc
-
-brew link --force curl
-brew link --force bison
+cat $basedir/brew/taps  | xargs brew tap
+cat $basedir/brew/brews | xargs brew install
+cat $basedir/brew/casks | xargs brew cask install
 
 # Disable the sudden motion sensor since disks are solid-state.
 sudo pmset -a sms 0
 
 # Enable JavaScript compilation from the CLI.
-ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc /usr/local/bin/jsc
+hash jsc 2>/dev/null || {
+  ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc /usr/local/bin/jsc
+}
 
 # Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
