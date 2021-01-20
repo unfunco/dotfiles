@@ -1,78 +1,28 @@
-execute pathogen#infect()
+syntax enable
 
-set nocompatible
-
-set autoindent
-set autoread
-set autowrite
-set backspace=indent,eol,start
-set diffopt+=vertical
-set encoding=utf-8
-set expandtab
-set guioptions-=T
-set incsearch
-set ignorecase
-set laststatus=2
-set lazyredraw
-set list listchars=tab:»·,trail:·
-set nobackup
-set noswapfile
-set nowrap
-set nowritebackup
-set number
-set numberwidth=5
-set relativenumber
-set ruler
-set shiftround
-set shiftwidth=2
-set showcmd
-set smartcase
-set smartindent
-set splitright
-set tabstop=2
-set ttyfast
-set wildmenu
+filetype indent on
+filetype plugin on
 
 nnoremap <space> <nop>
 let mapleader = " "
 
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  set hlsearch
-  syntax on
-endif
+set autoindent
+set autoread
+set autowrite
+set ignorecase
+set laststatus=2
+set lazyredraw
+set maxmempattern=2000
+set list listchars=tab:»·,trail:·
+set nobackup
+set noerrorbells
+set noswapfile
+set number
+set relativenumber
+set ruler
+set smartcase
+set ttyfast
+set wildmenu
 
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
-
-" Redraw the screen and remove highlighting
-nnoremap <silent> <C-l> :nohl<CR><C-l>
-
-augroup vimrcEx
-  autocmd!
-
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd FileType markdown setlocal spell
-  autocmd FileType css,scss,sass setlocal iskeyword+=-
-  autocmd FileType php set tabstop=4
-augroup END
-
-" Move faster
-nnoremap N 10j
-vnoremap N 10j
-nnoremap M 10k
-vnoremap M 10k
-
-" Disable K
+map <leader>x :e ~/t.md<cr>
 map K <nop>
-
-" Open ~/.zshrc in the same buffer
-nnoremap <leader>ez :e ~/.zshrc<cr>
-
-" Leader mappings
-vmap <leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
-
-" Lapses in concentration
-nnoremap ; :
-command WQ wq
-command Wq wq
-command Q q

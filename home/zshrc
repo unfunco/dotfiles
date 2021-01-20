@@ -13,55 +13,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-autoload -U colors
-autoload -Uz compinit
-autoload -Uz promptinit
+autoload -U +X colors && colors
+autoload -U +X compinit && compinit
 
-colors
-compinit
-promptinit
+unsetopt beep
+unsetopt nomatch
 
-tabs -2
+HISTSIZE=100000
+HISTFILESIZE=100000
+SAVEHIST=$HISTSIZE
 
-setopt appendhistory autocd extendedglob nomatch notify promptsubst
-unsetopt beep nomatch
-
-zstyle :compinstall filename '~/.zshrc'
-
-HISTFILE=~/.history
-HISTSIZE=1024
-SAVEHIST=8192
-
+export AZURE_CORE_COLLECT_TELEMETRY=false
+export AWS_DEFAULT_REGION=eu-west-2
 export CLICOLOR=1
+export GPG_TTY=$(tty)
+export HOMEBREW_NO_ANALYTICS=1
+export PROMPT="%(?.%F{71}0.%F{196}%?)%f %F{214}%1~%f $ "
+export SAM_CLI_TELEMETRY=0
 
-[[ -f ~/.zshaliases ]] && source ~/.zshaliases
-[[ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias headers="curl -sSL -D - $1 -o /dev/null"
+alias hist="history 1"
+alias ip="curl https://checkip.amazonaws.com 2>/dev/null"
+alias k="kubectl"
+alias md="mkdir -p"
+alias t="vi ~/Desktop/t.md"
 
-git_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null)
-  if [[ -n $ref ]]; then
-    echo " git:(%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%})"
-  fi
-}
-
-expand_alias() {
-  if [[ $LBUFFER =~ '[a-z0-9]+$' ]]; then
-    zle _expand_alias
-    zle expand-word
-  fi
-
-  zle self-insert
-}
-zle -N expand_alias
-
-export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_info)'$'\n''%(?.%{$fg_bold[green]%}🍍.%{$fg_bold[red]%}👻)%{$reset_color%}  '
-
-bindkey " " expand_alias
-bindkey -e
-
-if which rbenv > /dev/null; then
-  eval "$(rbenv init - zsh)";
-fi
-
-export NVM_DIR="/Users/danielmorris/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source <(kubectl completion zsh)
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

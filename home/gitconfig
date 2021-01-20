@@ -1,16 +1,23 @@
 [alias]
   br = branch
   co = checkout
-  ci = commit
   ec = config --global -e
-  hist = "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
   st = status
+
+[commit]
+  gpgsign = true
+
 [core]
   editor = /usr/bin/vim
   excludesfile = ~/.gitignore
+
+[gpg]
+  program = gpg
+
 [push]
   default = simple
+
 [user]
-  name = Daniel Morris
   email = daniel@honestempire.com
-  signingkey = BE2E8420
+  name = Daniel Morris
+  signingkey = 685A5EB8C6855C168AA06E5A502AAA65596627F6
