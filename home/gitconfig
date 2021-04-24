@@ -1,7 +1,11 @@
 [alias]
   br = branch
   co = checkout
+  d = diff
+  dc = diff --cached
   ec = config --global -e
+  latest = log -1 HEAD
+  please = push --force-with-lease
   st = status
 
 [commit]
@@ -11,11 +15,29 @@
   editor = /usr/bin/vim
   excludesfile = ~/.gitignore
 
+[filter]
+  clean = git-lfs clean -- %f
+  process = git-lfs filter-process
+  required = true
+  smudge = git-lfs smudge -- %f
+
 [gpg]
   program = gpg
 
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = false
+
 [push]
   default = simple
+
+[url "ssh://git@bitbucket.org"]
+  insteadof = https://bitbucket.org
+
+[url "ssh://git@github.com"]
+  insteadof = https://github.com
 
 [user]
   email = daniel@honestempire.com
