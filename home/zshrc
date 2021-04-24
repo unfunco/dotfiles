@@ -16,18 +16,11 @@
 autoload -U +X colors && colors
 autoload -U +X compinit && compinit
 
-unsetopt beep
-unsetopt nomatch
-
-HISTSIZE=100000
-HISTFILESIZE=100000
-SAVEHIST=$HISTSIZE
-
 export AZURE_CORE_COLLECT_TELEMETRY=false
 export AWS_DEFAULT_REGION=eu-west-2
 export CLICOLOR=1
+export GOPRIVATE="github.com/honestempire,github.com/unfunco"
 export GPG_TTY=$(tty)
-export HOMEBREW_NO_ANALYTICS=1
 export PROMPT="%(?.%F{71}0.%F{196}%?)%f %F{214}%1~%f $ "
 export SAM_CLI_TELEMETRY=0
 
@@ -37,6 +30,14 @@ alias ip="curl https://checkip.amazonaws.com 2>/dev/null"
 alias k="kubectl"
 alias md="mkdir -p"
 alias t="vi ~/Desktop/t.md"
+
+for c in "$HOME/.zsh/configs"/*.zsh; do
+  . $z
+done
+
+for f in "$HOME/.zsh/functions"/*.zsh; do
+  . $f
+done
 
 source <(kubectl completion zsh)
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
