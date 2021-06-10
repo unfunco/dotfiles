@@ -16,13 +16,16 @@
 autoload -U +X colors && colors
 autoload -U +X compinit && compinit
 
-export AZURE_CORE_COLLECT_TELEMETRY=false
-export AWS_DEFAULT_REGION=eu-west-2
-export CLICOLOR=1
+export AWS_DEFAULT_REGION="eu-west-2"
+export CLICOLOR="1"
+export DISPLAY=":0"
+export EDITOR="vim"
 export GOPRIVATE="github.com/honestempire,github.com/unfunco"
-export GPG_TTY=$(tty)
+export GPG_TTY="$(tty)"
+export HOMEBREW_NO_ANALYTICS="1"
 export PROMPT="%(?.%F{71}0.%F{196}%?)%f %F{214}%1~%f $ "
-export SAM_CLI_TELEMETRY=0
+export SAM_CLI_TELEMETRY="0"
+export VISUAL="$EDITOR"
 
 alias headers="curl -sSL -D - $1 -o /dev/null"
 alias hist="history 1"
