@@ -1,0 +1,2 @@
+irb.conf[:AUTO_INDENT] = true
+irb.conf[:SAVE_HISTORY] = 1000

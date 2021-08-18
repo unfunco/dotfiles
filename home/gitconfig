@@ -46,3 +46,6 @@
 
 [includeIf "gitdir:~/AND/"]
   path = ~/.gitconfig-and
+
+[includeIf "gitdir:~/LEGO/"]
+  path = ~/.gitconfig-lego
