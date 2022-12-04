@@ -39,10 +39,13 @@
 [url "ssh://git@github.com"]
   insteadof = https://github.com
 
+[url "ssh://git@gitlab.com"]
+  insteadof = https://gitlab.com
+
 [user]
   email = daniel@honestempire.com
   name = Daniel Morris
-  signingkey = 685A5EB8C6855C168AA06E5A502AAA65596627F6
+  signingkey = 6350DF31
 
 [includeIf "gitdir:~/AND/"]
   path = ~/.gitconfig-and
