@@ -13,8 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-zmodload zsh/zprof
-
 autoload -U +X colors && colors
 autoload -U +X compinit && compinit
 
@@ -26,7 +24,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT="1"
 export EDITOR="vim"
 export GATSBY_TELEMETRY_DISABLED="1"
 export GOPATH="/Users/danielmorris/go"
-export GOPRIVATE="github.com/honestempire,github.com/unfunco"
+export GOPRIVATE="github.com/and-digital-cloud,github.com/honestempire,github.com/Schroders-Personal-Wealth,github.com/unfunco"
 export GPG_TTY="$(tty)"
 export HOMEBREW_NO_ANALYTICS="1"
 export NEXT_TELEMETRY_DISABLED="1"
@@ -38,6 +36,7 @@ export VISUAL="$EDITOR"
 alias headers="curl -sSL -D - $1 -o /dev/null"
 alias hist="history 1"
 alias ip="curl https://checkip.amazonaws.com 2>/dev/null"
+alias ipc="ip | pbcopy"
 alias k="kubectl"
 alias l="ls -laht"
 alias md="mkdir -p"
@@ -58,5 +57,3 @@ eval "$(rbenv init - zsh)"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-zprof
