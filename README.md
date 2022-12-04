@@ -13,7 +13,7 @@ git clone git@github.com:unfunco/dotfiles.git
 cd dotfiles
 ```
 
-Install [Homebrew].
+Install [Homebrew] to for package management.
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -25,7 +25,10 @@ Install dependencies with Homebrew.
 brew bundle install
 ```
 
-Dotfiles are managed with [rcm].
+Dotfiles are managed with [rcm]. The following command will symbolically link
+the files in the repository home directory to your operating system home
+directory and will prefix filenames with a period so that they're hidden.
+This allows dotfiles to be edited in place and committed.
 
 ```bash
 rcup -d home -v
