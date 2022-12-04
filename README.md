@@ -22,7 +22,7 @@ Install [Homebrew].
 Install dependencies with Homebrew.
 
 ```bash
-brew bundle
+brew bundle install
 ```
 
 Dotfiles are managed with [rcm].
