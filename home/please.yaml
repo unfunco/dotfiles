@@ -2,5 +2,7 @@ tasks:
   flush:
     dns:
       steps:
-      - sudo: dscacheutil -flushcache
-      - sudo: killall -HUP mDNSResponder
+      - desc: Flushing the DNS cache
+        sudo: dscacheutil -flushcache
+      - desc: Restarting the DNS daemon
+        sudo: killall -HUP mDNSResponder
