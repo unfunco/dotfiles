@@ -44,6 +44,8 @@ alias l="ls -laht"
 alias md="mkdir -p"
 alias t="vi ~/Desktop/t.md"
 
+export PATH="$PATH:$GOPATH/bin"
+
 for c in "$HOME/.zsh/configs"/*.zsh; do
   . $c
 done
