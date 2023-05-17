@@ -50,5 +50,8 @@
 [includeIf "gitdir:~/AND/"]
   path = ~/.gitconfig-and
 
+[includeIf "gitdir:~/BA/"]
+  path = ~/.gitconfig-ba
+
 [includeIf "gitdir:~/LEGO/"]
   path = ~/.gitconfig-lego
