@@ -17,14 +17,16 @@ autoload -U +X colors && colors
 autoload -U +X compinit && compinit
 
 export AWS_DEFAULT_REGION="eu-west-1"
+export AWS_REGION="eu-west-1"
 export AZURE_CORE_COLLECT_TELEMETRY="0"
 export CLICOLOR="1"
 export DISPLAY=":0"
 export DOTNET_CLI_TELEMETRY_OPTOUT="1"
 export EDITOR="vim"
 export GATSBY_TELEMETRY_DISABLED="1"
+export GIT_EDITOR="vim"
 export GOPATH="/Users/danielmorris/go"
-export GOPRIVATE="github.com/and-digital-cloud,github.com/honestempire,github.com/Schroders-Personal-Wealth,github.com/unfunco"
+export GOPRIVATE="github.com/and-digital-cloud,github.com/BritishAirways-Ent,github.com/honestempire,github.com/unfunco"
 export GOTELEMETRY="off"
 export GPG_TTY="$(tty)"
 export HOMEBREW_NO_ANALYTICS="1"
