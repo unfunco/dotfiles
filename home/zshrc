@@ -30,7 +30,6 @@ export GOPRIVATE="github.com/and-digital-cloud,github.com/BritishAirways-Ent,git
 export GOTELEMETRY="off"
 export GPG_TTY="$(tty)"
 export HOMEBREW_NO_ANALYTICS="1"
-export HOMEBREW_NO_GOOGLE_ANALYTICS="1"
 export NEXT_TELEMETRY_DISABLED="1"
 export NVM_DIR="$HOME/.nvm"
 export PROMPT="%(?.%F{71}0.%F{196}%?)%f %F{214}%1~%f $ "
@@ -44,7 +43,6 @@ alias ipc="ip | pbcopy"
 alias k="kubectl"
 alias l="ls -laht"
 alias md="mkdir -p"
-alias t="vi ~/Desktop/t.md"
 
 export PATH="$PATH:$GOPATH/bin"
 
