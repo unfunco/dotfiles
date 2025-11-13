@@ -46,15 +46,3 @@
   email = daniel@honestempire.com
   name = Daniel Morris
   signingkey = 6350DF31
-
-[includeIf "gitdir:~/AND/"]
-  path = ~/.gitconfig-and
-
-[includeIf "gitdir:~/BA/"]
-  path = ~/.gitconfig-ba
-
-[includeif "gitdir:~/IAG/"]
-  path = ~/.gitconfig-iag
-
-[includeIf "gitdir:~/LEGO/"]
-  path = ~/.gitconfig-lego
