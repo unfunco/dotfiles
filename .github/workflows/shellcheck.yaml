@@ -1,0 +1,23 @@
+name: ShellCheck
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - "**/*.sh"
+  pull_request:
+    branches:
+    - main
+    paths:
+    - "**/*.sh"
+
+jobs:
+  verify:
+    name: Verify
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v6
+    - name: Check shell scripts
+      run: find . -type f \( -name '*.sh' \) | xargs shellcheck -x -s bash

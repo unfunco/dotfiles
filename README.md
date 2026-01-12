@@ -16,7 +16,7 @@ cd dotfiles
 Install [Homebrew] to for package management.
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 Install dependencies with Homebrew.
@@ -39,6 +39,6 @@ rcup -d home -v
 Copyright © 2016 [Daniel Morris](https://unfun.co)  
 Made available under the terms of the [Apache License, Version 2.0](LICENSE.md).
 
-[Homebrew]: https://brew.sh/
-[macOS]: https://www.apple.com/uk/macos/
+[homebrew]: https://brew.sh/
+[macos]: https://www.apple.com/uk/macos/
 [rcm]: https://github.com/thoughtbot/rcm
