@@ -2,4 +2,5 @@
 # SPDX-License-Identifier: MIT
 
 export EDITOR=vim
+export GIT_EDITOR=$EDITOR
 export VISUAL=$EDITOR

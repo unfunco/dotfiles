@@ -1,5 +1,5 @@
-# SPDX-FileCopyrightText: 2026 Daniel Morris <daniel@honestempire.com>
-# SPDX-License-Identifier: MIT
+" SPDX-FileCopyrightText: 2026 Daniel Morris <daniel@honestempire.com>
+" SPDX-License-Identifier: MIT
 
 syntax enable
 
@@ -12,20 +12,41 @@ let mapleader = " "
 set autoindent
 set autoread
 set autowrite
+set backspace=indent,eol,start
+set clipboard=unnamed
+set cursorline
+set encoding=utf-8
+set hidden
+set hlsearch
 set ignorecase
+set incsearch
 set laststatus=2
 set lazyredraw
-set maxmempattern=2000
 set list listchars=tab:»·,trail:·
+set maxmempattern=2000
 set nobackup
 set noerrorbells
 set noswapfile
+set nowrap
 set number
 set relativenumber
 set ruler
+set scrolloff=8
+set showcmd
+set showmatch
+set signcolumn=yes
 set smartcase
+set splitbelow splitright
 set ttyfast
+set updatetime=300
 set wildmenu
 
 map <leader>x :e ~/t.md<cr>
 map K <nop>
+
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
