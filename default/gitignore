@@ -1,7 +1,8 @@
-# General.
+# General
 *.sublime-workspace
 *.swp
 .CFUserTextEncoding
 .DS_Store
 .idea/
 .vagrant/
+Thumbs.db

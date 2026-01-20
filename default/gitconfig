@@ -1,5 +1,6 @@
 [alias]
   br = branch
+  changed = "show --pretty=\"format:\" --name-only"
   co = checkout
   d = diff
   dc = diff --cached
@@ -12,7 +13,7 @@
   gpgsign = true
 
 [core]
-  editor = /usr/bin/vim
+  editor = vim
   excludesfile = ~/.gitignore
 
 [filter]
