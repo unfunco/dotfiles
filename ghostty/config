@@ -1,0 +1,19 @@
+background-blur-radius = 40
+background-opacity = 1
+cursor-color = #ffcc66
+cursor-style = block
+
+font-size = 15
+font-thicken = true
+
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = shift+enter=text:\n
+
+maximize = true
+
+shell-integration-features = no-cursor
+
+theme = Ayu Mirage
+
+window-padding-x = 25
+window-padding-y = 15
