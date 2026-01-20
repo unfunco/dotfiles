@@ -1,0 +1,5 @@
+Host *
+  AddKeysToAgent no
+  Compression no
+  ForwardAgent no
+  IdentityFile ~/.ssh/id_ed25519
