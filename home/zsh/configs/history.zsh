@@ -1,4 +1,0 @@
-setopt hist_ignore_all_dups inc_append_history
-
-HISTSIZE=100000
-HISTFILESIZE=100000

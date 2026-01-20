@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Daniel Morris <daniel@honestempire.com>
+# SPDX-License-Identifier: MIT
+
 export AZURE_CORE_COLLECT_TELEMETRY="0"
 export DOTNET_CLI_TELEMETRY_OPTOUT="1"
 export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT="1"
