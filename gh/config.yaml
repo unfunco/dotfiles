@@ -1,0 +1,9 @@
+---
+version: 1
+
+aliases:
+  pr: pr create --web
+  v: repo view --web
+
+editor: vim
+git_protocol: ssh
