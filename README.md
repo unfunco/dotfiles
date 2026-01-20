@@ -37,7 +37,7 @@ rcup -d home -v
 ## License
 
 Copyright © 2016 [Daniel Morris](https://unfun.co)  
-Made available under the terms of the [Apache License, Version 2.0](LICENSE.md).
+Made available under the terms of the [MIT License](LICENSE.md).
 
 [homebrew]: https://brew.sh/
 [macos]: https://www.apple.com/uk/macos/
