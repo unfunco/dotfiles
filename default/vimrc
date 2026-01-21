@@ -14,7 +14,6 @@ set autoread
 set autowrite
 set backspace=indent,eol,start
 set clipboard=unnamed
-set cursorline
 set encoding=utf-8
 set hidden
 set hlsearch
@@ -34,7 +33,6 @@ set ruler
 set scrolloff=8
 set showcmd
 set showmatch
-set signcolumn=yes
 set smartcase
 set splitbelow splitright
 set ttyfast
