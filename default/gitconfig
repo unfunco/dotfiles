@@ -46,4 +46,6 @@
 [user]
   email = daniel@honestempire.com
   name = Daniel Morris
-  signingkey = 6350DF31
+
+[include]
+  path = ~/.gitconfig-machine
