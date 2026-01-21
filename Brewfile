@@ -2,6 +2,9 @@ tap "aws/tap"
 
 cask "claude-code"
 cask "copilot-cli"
+cask "font-jetbrains-mono"
+cask "font-mona-sans"
+cask "font-sf-mono"
 cask "ghostty"
 
 brew "aws-iam-authenticator"
