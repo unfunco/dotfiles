@@ -25,13 +25,14 @@ Install dependencies with Homebrew.
 brew bundle install
 ```
 
-Dotfiles are managed with [rcm]. The following command will symbolically link
-the files in the repository home directory to your operating system home
-directory and will prefix filenames with a period so that they're hidden.
-This allows dotfiles to be edited in place and committed.
+Dotfiles are managed with [rcm]. The following commands will symbolically link
+the files in the repository to your operating system home directory and will
+prefix filenames with a period so that they're hidden. This allows dotfiles to
+be edited in place and committed.
 
 ```bash
-rcup -d home -v
+rcup -d default -v
+rcup -d . -S zsh zsh
 ```
 
 ## License
