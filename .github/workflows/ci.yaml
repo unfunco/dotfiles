@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  verify:
+    name: Verify
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v6
+    - name: Check shell scripts
+      run: find . -type f \( -name '*.sh' \) | xargs shellcheck -x -s bash
+
+  release:
+    name: Release?
+    needs: [ verify ]
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Prepare the release
+      uses: googleapis/release-please-action@v4
+      with:
+        config-file: .github/release-please-config.json
+        manifest-file: .github/release-please-manifest.json
