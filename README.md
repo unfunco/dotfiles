@@ -17,6 +17,9 @@ Install [Homebrew] to for package management.
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo >> "$HOME/.zprofile"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> "$HOME/.zprofile"
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 ```
 
 Install dependencies with Homebrew.

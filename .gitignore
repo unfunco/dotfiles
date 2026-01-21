@@ -2,3 +2,5 @@
 .DS_Store
 .idea/
 Thumbs.db
+
+ssh/id_ed25519
