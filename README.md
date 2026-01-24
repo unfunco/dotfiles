@@ -35,7 +35,9 @@ be edited in place and committed.
 
 ```bash
 rcup -d default -v
+rcup -d . -S ssh ssh
 rcup -d . -S zsh zsh
+ln -sf "$PWD/ghostty/config" "${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/config"
 ```
 
 ## License
