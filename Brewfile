@@ -5,6 +5,8 @@ cask "font-jetbrains-mono-nerd-font"
 cask "font-mona-sans"
 cask "font-sf-mono"
 cask "ghostty"
+cask "github"
+cask "vlc"
 
 brew "awscli"
 brew "bazel"
