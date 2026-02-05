@@ -9,9 +9,22 @@ setopt inc_append_history
 setopt extended_history
 setopt hist_expire_dups_first
 
-HIST_DIR="$HOME/.history/zsh/$(date +%Y/%m)"
-mkdir -p "$HIST_DIR"
-
-export HISTFILE="$HIST_DIR/$(date +%d)_${HOST%%.*}.txt"
 export HISTSIZE=100000
 export SAVEHIST="$HISTSIZE"
+
+function _update_histfile() {
+  local hist_dir="$HOME/.history/zsh/$(date +%Y/%m)"
+  local hist_file="$hist_dir/$(date +%d)_${HOST%%.*}.txt"
+
+  if [[ "$HISTFILE" != "$hist_file" ]]; then
+    mkdir -p "$hist_dir"
+    fc -W
+    export HISTFILE="$hist_file"
+    fc -R
+  fi
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd _update_histfile
+
+_update_histfile
