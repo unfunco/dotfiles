@@ -16,7 +16,7 @@
   editor = nvim
   excludesfile = ~/.gitignore
 
-[filter]
+[filter "lfs"]
   clean = git-lfs clean -- %f
   process = git-lfs filter-process
   required = true
