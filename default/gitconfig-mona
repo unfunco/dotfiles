@@ -1,0 +1,6 @@
+# Mona is a 15-inch 2025 MacBook Air M4 provided by GitHub.
+# The hostname is the device serial number.
+
+[user]
+  email = unfunco@github.com
+  signingkey = 2BA1386D3FF6DC53
