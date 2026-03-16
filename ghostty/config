@@ -6,8 +6,9 @@ cursor-style = block
 font-size = 15
 font-thicken = true
 
-keybind = global:cmd+grave_accent=toggle_quick_terminal
 keybind = shift+enter=text:\n
+
+macos-icon = xray
 
 maximize = true
 
