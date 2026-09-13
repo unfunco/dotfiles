@@ -3,7 +3,27 @@ version: 1
 
 aliases:
   pr: pr create --web
-  rc: '!f() { repo=$(gh repo create "$@") || return; printf "%s\n" "$repo"; gh repo edit "$repo" --enable-wiki=false --enable-projects=false --delete-branch-on-merge; }; f'
+  rc: >-
+    !f() {
+      repo=$(gh repo create "$@") || return;
+      printf "%s\n" "$repo";
+      gh repo edit "$repo" \
+        --enable-wiki=false \
+        --enable-projects=false \
+        --enable-merge-commit=false \
+        --enable-rebase-merge=false \
+        --allow-update-branch \
+        --enable-auto-merge \
+        --delete-branch-on-merge \
+      && GH_REPO="$repo" gh api --method PUT "repos/{owner}/{repo}/immutable-releases" --silent \
+      && GH_REPO="$repo" gh api --method PUT "repos/{owner}/{repo}/actions/permissions" \
+        -F enabled=true \
+        -F sha_pinning_required=true \
+        --silent \
+      && GH_REPO="$repo" gh api --method PUT "repos/{owner}/{repo}/actions/permissions/workflow" \
+        -F can_approve_pull_request_reviews=true \
+        --silent;
+    }; f
   v: repo view --web
 
 editor: vim
