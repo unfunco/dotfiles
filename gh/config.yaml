@@ -3,6 +3,7 @@ version: 1
 
 aliases:
   pr: pr create --web
+  rc: '!f() { repo=$(gh repo create "$@") || return; printf "%s\n" "$repo"; gh repo edit "$repo" --enable-wiki=false --enable-projects=false --delete-branch-on-merge; }; f'
   v: repo view --web
 
 editor: vim
