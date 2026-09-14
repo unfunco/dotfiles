@@ -28,7 +28,7 @@ aliases:
       && GH_REPO="$repo" gh api --method PUT "repos/{owner}/{repo}/actions/permissions/workflow" \
         -F can_approve_pull_request_reviews=true \
         --silent;
-    }; f
+    }; f "$@"
   v: repo view --web
 
 editor: vim
