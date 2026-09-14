@@ -1,6 +1,11 @@
 ---
 version: 1
 
+accessible_colors: disabled
+accessible_prompter: disabled
+
+color_labels: enabled
+
 aliases:
   pr: pr create --web
   rc: >-
@@ -28,3 +33,4 @@ aliases:
 
 editor: vim
 git_protocol: ssh
+spinner: enabled
