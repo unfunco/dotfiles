@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.2.0](https://github.com/unfunco/dotfiles/compare/v0.1.0...v0.2.0) (2026-09-27)
+
+
+### 💡 New features
+
+* Configure repository creation defaults ([#7](https://github.com/unfunco/dotfiles/issues/7)) ([fbe2471](https://github.com/unfunco/dotfiles/commit/fbe2471b18ebad8d01ba87a1193690861fe9e30f))
+
+
+### 🐛 Bug fixes
+
+* Pass arguments to the gh rc alias ([ea92e0b](https://github.com/unfunco/dotfiles/commit/ea92e0b1d19161c32000083e8aa004af67703f9b))
+
+
+### 🧹 Miscellaneous
+
+* Add options to gh/config.yaml ([ea28764](https://github.com/unfunco/dotfiles/commit/ea2876428f10d4430ec95595872bec97e683bbc5))
+* Update meta workflow to v0.3.0 ([#10](https://github.com/unfunco/dotfiles/issues/10)) ([aa7c555](https://github.com/unfunco/dotfiles/commit/aa7c555d960083e16ae5574698e3733187aca058))
+* Use reusable release workflow ([#9](https://github.com/unfunco/dotfiles/issues/9)) ([3f73428](https://github.com/unfunco/dotfiles/commit/3f734284ee1ba5a004caa6c18aaaa30d9f73356f))
+
 ## 0.1.0 (2026-09-13)
 
 
