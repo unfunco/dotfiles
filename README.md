@@ -40,6 +40,9 @@ rcup -d . -S zsh zsh
 ln -sf "$PWD/ghostty/config" "${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/config"
 ```
 
+`rcup -d default -v` also installs `~/.config/nvim/init.vim`, which sources
+`~/.vimrc` so Vim and Neovim share the same base configuration.
+
 ## License
 
 Copyright © 2016 [Daniel Morris](https://unfun.co)  
