@@ -12,7 +12,7 @@ macos-icon = xray
 
 maximize = true
 
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor,ssh-env,ssh-terminfo
 
 theme = Ayu Mirage
 
